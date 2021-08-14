@@ -13114,48 +13114,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1166017020966508539, guid: 2288452e19a93b14f92e3e5fed2ad645,
         type: 3}
-      propertyPath: triggers.Array.data[1].key
+      propertyPath: triggers.Array.data[2].key
       value: Decrement
       objectReference: {fileID: 0}
     - target: {fileID: 1166017020966508539, guid: 2288452e19a93b14f92e3e5fed2ad645,
         type: 3}
-      propertyPath: triggers.Array.data[1].type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1166017020966508539, guid: 2288452e19a93b14f92e3e5fed2ad645,
-        type: 3}
-      propertyPath: triggers.Array.data[1].target
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056916466851104917, guid: 2288452e19a93b14f92e3e5fed2ad645,
-        type: 3}
-      propertyPath: triggers.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056916466851104917, guid: 2288452e19a93b14f92e3e5fed2ad645,
-        type: 3}
-      propertyPath: triggers.Array.data[2].key
-      value: Increment
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056916466851104917, guid: 2288452e19a93b14f92e3e5fed2ad645,
-        type: 3}
-      propertyPath: triggers.Array.data[2].type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056916466851104917, guid: 2288452e19a93b14f92e3e5fed2ad645,
-        type: 3}
       propertyPath: triggers.Array.data[2].target
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056916466851104917, guid: 2288452e19a93b14f92e3e5fed2ad645,
-        type: 3}
-      propertyPath: triggers.Array.data[2].value.boolValue
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4316041622239371438, guid: 2288452e19a93b14f92e3e5fed2ad645,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4316041622239371443, guid: 2288452e19a93b14f92e3e5fed2ad645,
         type: 3}
@@ -22868,6 +22833,7 @@ GameObject:
   - component: {fileID: 1547445450}
   - component: {fileID: 1547445456}
   - component: {fileID: 1547445455}
+  - component: {fileID: 1547445457}
   - component: {fileID: 1547445454}
   - component: {fileID: 1547445453}
   m_Layer: 0
@@ -23102,6 +23068,59 @@ MonoBehaviour:
       boolValue: 0
       floatValue: 0
       integerValue: 0
+--- !u!114 &1547445457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547445448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67bdc2960f9462385a7fba1c0052836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalGimmickKey:
+    key:
+      target: 2
+      key: Decrement
+    item: {fileID: 0}
+  logic:
+    statements:
+    - singleStatement:
+        targetState:
+          target: 2
+          key: isGameStart
+          parameterType: 1
+        expression:
+          type: 0
+          value:
+            type: 0
+            constant:
+              type: 1
+              boolValue: 0
+              floatValue: 0
+              integerValue: 0
+            sourceState:
+              target: 2
+              key: 
+          operatorExpression:
+            operator: 0
+            operands:
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 0
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 2
+                  key: 
+              operatorExpression:
+                operator: 0
+                operands: []
 --- !u!1 &1548475990
 GameObject:
   m_ObjectHideFlags: 0
@@ -23364,7 +23383,7 @@ MonoBehaviour:
   key:
     target: 0
     key: Reactive
-  delayTimeSeconds: 5
+  delayTimeSeconds: 0.5
   triggers:
   - target: 0
     specifiedTargetItem: {fileID: 0}
@@ -29788,6 +29807,78 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1991117845}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1995990518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1270078334, guid: b019ab70ef9533f49bf9b71713205ad7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2082737773068787530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1995990522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995990518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ec462289974bc7b6a239dbfffa33aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key:
+    target: 2
+    key: Decrement
+    item: {fileID: 0}
+  logic:
+    statements:
+    - singleStatement:
+        targetState:
+          target: 1
+          key: Respawn
+          parameterType: 0
+        expression:
+          type: 1
+          value:
+            type: 0
+            constant:
+              type: 1
+              boolValue: 0
+              floatValue: 0
+              integerValue: 0
+            sourceState:
+              target: 1
+              key: Respawn
+          operatorExpression:
+            operator: 7
+            operands:
+            - type: 0
+              value:
+                type: 1
+                constant:
+                  type: 1
+                  boolValue: 0
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 2
+                  key: isGameStart
+              operatorExpression:
+                operator: 0
+                operands: []
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 1
+                  floatValue: 3
+                  integerValue: 0
+                sourceState:
+                  target: 1
+                  key: Respawn
+              operatorExpression:
+                operator: 0
+                operands: []
 --- !u!1001 &2001278542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31875,82 +31966,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.targetState.key
-      value: moveSpeed
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.targetState.target
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.value.type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.targetState.parameterType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.value.constant.type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.value.sourceState.key
-      value: hp
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.value.sourceState.target
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.operatorExpression.operator
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.operatorExpression.operands.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.operatorExpression.operands.Array.data[0].value.type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.operatorExpression.operands.Array.data[0].value.constant.type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.operatorExpression.operands.Array.data[1].value.constant.type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.operatorExpression.operands.Array.data[0].value.sourceState.key
-      value: moveSpeed
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.operatorExpression.operands.Array.data[1].value.sourceState.key
-      value: damage
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.operatorExpression.operands.Array.data[0].value.sourceState.target
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.operatorExpression.operands.Array.data[1].value.sourceState.target
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[2].singleStatement.expression.operatorExpression.operands.Array.data[1].value.constant.integerValue
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 794507638249486049, guid: b019ab70ef9533f49bf9b71713205ad7,
         type: 3}
       propertyPath: m_RootOrder
@@ -32011,10 +32026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4834490749806542439, guid: b019ab70ef9533f49bf9b71713205ad7,
+    - target: {fileID: 7743927150696652405, guid: b019ab70ef9533f49bf9b71713205ad7,
         type: 3}
-      propertyPath: triggers.Array.data[0].value.floatValue
-      value: 2
+      propertyPath: logic.statements.Array.data[1].singleStatement.expression.value.constant.floatValue
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
