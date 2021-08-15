@@ -8,7 +8,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4810119546513162365}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
@@ -47,7 +47,7 @@ Transform:
   m_GameObject: {fileID: 8465407990803066407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 5299376195427949255}
   - {fileID: 8493658624909445309}
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: -2917047267138979866}
   collisionEventType: 0
-  collisionType: 1
+  collisionType: -1
   triggers:
   - target: 3
     specifiedTargetItem: {fileID: 0}
@@ -4951,7 +4951,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 07d6d958e77034d45878c55ac43c5521, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
