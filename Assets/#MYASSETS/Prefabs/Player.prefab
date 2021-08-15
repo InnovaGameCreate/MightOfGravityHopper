@@ -1151,7 +1151,7 @@ MonoBehaviour:
             constant:
               type: 2
               boolValue: 0
-              floatValue: 100
+              floatValue: 70
               integerValue: 0
             sourceState:
               target: 1
@@ -1305,7 +1305,7 @@ MonoBehaviour:
             constant:
               type: 2
               boolValue: 0
-              floatValue: 1
+              floatValue: 3.5
               integerValue: 0
             sourceState:
               target: 1
@@ -1505,7 +1505,7 @@ MonoBehaviour:
     type: 2
     value:
       boolValue: 0
-      floatValue: 1
+      floatValue: 3.5
       integerValue: 0
 --- !u!114 &1862998717
 MonoBehaviour:
@@ -1682,6 +1682,7 @@ GameObject:
   - component: {fileID: 1270078335}
   - component: {fileID: 1270078337}
   - component: {fileID: 1270078336}
+  - component: {fileID: 1995990522}
   m_Layer: 0
   m_Name: Respawn
   m_TagString: Untagged
@@ -1737,6 +1738,14 @@ MonoBehaviour:
       boolValue: 0
       floatValue: 0
       integerValue: 0
+  - target: 2
+    specifiedTargetItem: {fileID: 0}
+    key: isAlive
+    type: 1
+    value:
+      boolValue: 0
+      floatValue: 0
+      integerValue: 0
 --- !u!114 &1270078336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1753,6 +1762,72 @@ MonoBehaviour:
     target: 1
     key: Respawn
     item: {fileID: 0}
+--- !u!114 &1995990522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270078334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ec462289974bc7b6a239dbfffa33aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key:
+    target: 2
+    key: Decrement
+    item: {fileID: 0}
+  logic:
+    statements:
+    - singleStatement:
+        targetState:
+          target: 1
+          key: Respawn
+          parameterType: 0
+        expression:
+          type: 1
+          value:
+            type: 0
+            constant:
+              type: 1
+              boolValue: 0
+              floatValue: 0
+              integerValue: 0
+            sourceState:
+              target: 1
+              key: Respawn
+          operatorExpression:
+            operator: 7
+            operands:
+            - type: 0
+              value:
+                type: 1
+                constant:
+                  type: 1
+                  boolValue: 0
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 2
+                  key: isGameStart
+              operatorExpression:
+                operator: 0
+                operands: []
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 1
+                  floatValue: 3
+                  integerValue: 0
+                sourceState:
+                  target: 1
+                  key: Respawn
+              operatorExpression:
+                operator: 0
+                operands: []
 --- !u!1 &1393365278
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,10 +2171,10 @@ MonoBehaviour:
   globalGimmickKey:
     key:
       target: 1
-      key: hp
-    item: {fileID: 0}
-  parameterType: 3
-  format: 'HP : {0}'
+      key: isAlive
+    item: {fileID: 4316041622239371437, guid: 2288452e19a93b14f92e3e5fed2ad645, type: 3}
+  parameterType: 1
+  format: 'IsAlive: {0}'
 --- !u!223 &1843972737
 Canvas:
   m_ObjectHideFlags: 0
@@ -2956,7 +3031,7 @@ MonoBehaviour:
             constant:
               type: 2
               boolValue: 0
-              floatValue: 1
+              floatValue: 3
               integerValue: 10
             sourceState:
               target: 1
@@ -2989,6 +3064,40 @@ MonoBehaviour:
             type: 0
             constant:
               type: 2
+              boolValue: 0
+              floatValue: 3
+              integerValue: 10
+            sourceState:
+              target: 1
+              key: 
+          operatorExpression:
+            operator: 0
+            operands:
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 0
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 1
+                  key: 
+              operatorExpression:
+                operator: 0
+                operands: []
+    - singleStatement:
+        targetState:
+          target: 1
+          key: isAlive
+          parameterType: 1
+        expression:
+          type: 0
+          value:
+            type: 0
+            constant:
+              type: 1
               boolValue: 0
               floatValue: 3
               integerValue: 10
