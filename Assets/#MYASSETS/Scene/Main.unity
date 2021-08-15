@@ -1246,7 +1246,8 @@ PrefabInstance:
         type: 3}
       propertyPath: itemTemplate
       value: 
-      objectReference: {fileID: 2012860013}
+      objectReference: {fileID: 4316041622239371437, guid: 2288452e19a93b14f92e3e5fed2ad645,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7850e2d69bc4c1a43b1c84dde479042a, type: 3}
 --- !u!1001 &104146432
@@ -11056,6 +11057,68 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 729843742}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &743807874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 743807875}
+  - component: {fileID: 743807876}
+  - component: {fileID: 743807877}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &743807875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743807874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 375, z: 0}
+  m_LocalScale: {x: 40.598, y: 22.794, z: 54.76}
+  m_Children: []
+  m_Father: {fileID: 1265957991}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &743807876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743807874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &743807877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743807874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2b9f4eb5444df69e31db5c54e12447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalGimmickKey:
+    key:
+      target: 2
+      key: isGameStart
+    item: {fileID: 0}
 --- !u!1001 &743886266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13107,21 +13170,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205373715}
     m_Modifications:
-    - target: {fileID: 1166017020966508539, guid: 2288452e19a93b14f92e3e5fed2ad645,
-        type: 3}
-      propertyPath: triggers.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1166017020966508539, guid: 2288452e19a93b14f92e3e5fed2ad645,
-        type: 3}
-      propertyPath: triggers.Array.data[2].key
-      value: Decrement
-      objectReference: {fileID: 0}
-    - target: {fileID: 1166017020966508539, guid: 2288452e19a93b14f92e3e5fed2ad645,
-        type: 3}
-      propertyPath: triggers.Array.data[2].target
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4316041622239371443, guid: 2288452e19a93b14f92e3e5fed2ad645,
         type: 3}
       propertyPath: m_RootOrder
@@ -17814,6 +17862,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 743807875}
   - {fileID: 1733519597}
   - {fileID: 1548475991}
   - {fileID: 1547445449}
@@ -22836,6 +22885,8 @@ GameObject:
   - component: {fileID: 1547445457}
   - component: {fileID: 1547445454}
   - component: {fileID: 1547445453}
+  - component: {fileID: 1547445458}
+  - component: {fileID: 1547445459}
   m_Layer: 0
   m_Name: GameStartTarget
   m_TagString: Untagged
@@ -22856,7 +22907,7 @@ Transform:
   m_Children:
   - {fileID: 1247200224}
   m_Father: {fileID: 1265957991}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1547445450
 SphereCollider:
@@ -22936,15 +22987,7 @@ MonoBehaviour:
   triggers:
   - target: 4
     specifiedTargetItem: {fileID: 0}
-    key: isGameStart
-    type: 1
-    value:
-      boolValue: 1
-      floatValue: 0
-      integerValue: 0
-  - target: 4
-    specifiedTargetItem: {fileID: 0}
-    key: GameStart
+    key: JudgeGameStart
     type: 0
     value:
       boolValue: 1
@@ -23121,6 +23164,201 @@ MonoBehaviour:
               operatorExpression:
                 operator: 0
                 operands: []
+--- !u!114 &1547445458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547445448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67bdc2960f9462385a7fba1c0052836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalGimmickKey:
+    key:
+      target: 2
+      key: JudgeGameStart
+    item: {fileID: 0}
+  logic:
+    statements:
+    - singleStatement:
+        targetState:
+          target: 2
+          key: isGameStart
+          parameterType: 1
+        expression:
+          type: 1
+          value:
+            type: 0
+            constant:
+              type: 1
+              boolValue: 1
+              floatValue: 0
+              integerValue: 0
+            sourceState:
+              target: 2
+              key: 
+          operatorExpression:
+            operator: 10
+            operands:
+            - type: 0
+              value:
+                type: 1
+                constant:
+                  type: 1
+                  boolValue: 1
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 2
+                  key: playerCount
+              operatorExpression:
+                operator: 0
+                operands: []
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 3
+                  boolValue: 1
+                  floatValue: 0
+                  integerValue: 1
+                sourceState:
+                  target: 2
+                  key: 2
+              operatorExpression:
+                operator: 0
+                operands: []
+    - singleStatement:
+        targetState:
+          target: 2
+          key: GameStart
+          parameterType: 0
+        expression:
+          type: 1
+          value:
+            type: 1
+            constant:
+              type: 1
+              boolValue: 1
+              floatValue: 0
+              integerValue: 0
+            sourceState:
+              target: 2
+              key: GameStart
+          operatorExpression:
+            operator: 10
+            operands:
+            - type: 0
+              value:
+                type: 1
+                constant:
+                  type: 1
+                  boolValue: 1
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 2
+                  key: playerCount
+              operatorExpression:
+                operator: 0
+                operands: []
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 3
+                  boolValue: 1
+                  floatValue: 0
+                  integerValue: 1
+                sourceState:
+                  target: 2
+                  key: GameStart
+              operatorExpression:
+                operator: 0
+                operands: []
+--- !u!114 &1547445459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547445448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06d8dc2ce9e442ab2712de694945b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 1547445454}
+  key:
+    target: 2
+    key: JudgeGameStart
+  logic:
+    statements:
+    - singleStatement:
+        targetState:
+          target: 1
+          key: isAlive
+          parameterType: 1
+        expression:
+          type: 0
+          value:
+            type: 0
+            constant:
+              type: 1
+              boolValue: 1
+              floatValue: 0
+              integerValue: 0
+            sourceState:
+              target: 0
+              key: 
+          operatorExpression:
+            operator: 18
+            operands:
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 1
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 0
+                  key: 
+              operatorExpression:
+                operator: 0
+                operands: []
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 1
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 0
+                  key: 
+              operatorExpression:
+                operator: 0
+                operands: []
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 1
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 0
+                  key: 
+              operatorExpression:
+                operator: 0
+                operands: []
 --- !u!1 &1548475990
 GameObject:
   m_ObjectHideFlags: 0
@@ -23157,7 +23395,7 @@ Transform:
   m_LocalScale: {x: 30, y: 0.1, z: 30}
   m_Children: []
   m_Father: {fileID: 1265957991}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1548475992
 BoxCollider:
@@ -26024,7 +26262,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1265957991}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1733519598
 Light:
@@ -29948,78 +30186,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1991117845}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1995990518 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1270078334, guid: b019ab70ef9533f49bf9b71713205ad7,
-    type: 3}
-  m_PrefabInstance: {fileID: 2082737773068787530}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1995990522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1995990518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86ec462289974bc7b6a239dbfffa33aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key:
-    target: 2
-    key: Decrement
-    item: {fileID: 0}
-  logic:
-    statements:
-    - singleStatement:
-        targetState:
-          target: 1
-          key: Respawn
-          parameterType: 0
-        expression:
-          type: 1
-          value:
-            type: 0
-            constant:
-              type: 1
-              boolValue: 0
-              floatValue: 0
-              integerValue: 0
-            sourceState:
-              target: 1
-              key: Respawn
-          operatorExpression:
-            operator: 7
-            operands:
-            - type: 0
-              value:
-                type: 1
-                constant:
-                  type: 1
-                  boolValue: 0
-                  floatValue: 0
-                  integerValue: 0
-                sourceState:
-                  target: 2
-                  key: isGameStart
-              operatorExpression:
-                operator: 0
-                operands: []
-            - type: 0
-              value:
-                type: 0
-                constant:
-                  type: 1
-                  boolValue: 1
-                  floatValue: 3
-                  integerValue: 0
-                sourceState:
-                  target: 1
-                  key: Respawn
-              operatorExpression:
-                operator: 0
-                operands: []
 --- !u!1001 &2001278542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30221,18 +30387,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2011806264}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2012860013 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4316041622239371437, guid: 2288452e19a93b14f92e3e5fed2ad645,
-    type: 3}
-  m_PrefabInstance: {fileID: 885619385}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3977a5e65e72f4db4b85ddba10d48dd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2014964450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32107,18 +32261,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1061729682, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[0].singleStatement.expression.value.constant.floatValue
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 1061729683, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: logic.statements.Array.data[3].singleStatement.expression.value.constant.floatValue
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862998716, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
-      propertyPath: triggers.Array.data[1].value.floatValue
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 794507638249486049, guid: b019ab70ef9533f49bf9b71713205ad7,
         type: 3}
       propertyPath: m_RootOrder
@@ -32178,11 +32320,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7743927150696652405, guid: b019ab70ef9533f49bf9b71713205ad7,
-        type: 3}
-      propertyPath: logic.statements.Array.data[1].singleStatement.expression.value.constant.floatValue
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
