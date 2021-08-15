@@ -1246,7 +1246,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemTemplate
       value: 
-      objectReference: {fileID: 4316041622239371437, guid: 2288452e19a93b14f92e3e5fed2ad645,
+      objectReference: {fileID: 3016690932170793026, guid: cdcdd685eb06d1b4f8c3407dfa62dcda,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7850e2d69bc4c1a43b1c84dde479042a, type: 3}
@@ -22983,7 +22983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 1547445454}
   collisionEventType: 0
-  collisionType: 2
+  collisionType: -1
   triggers:
   - target: 4
     specifiedTargetItem: {fileID: 0}
@@ -32261,6 +32261,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
+      propertyPath: key.key
+      value: Damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
+      propertyPath: logic.statements.Array.data[0].singleStatement.expression.operatorExpression.operands.Array.data[1].value.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
+      propertyPath: logic.statements.Array.data[0].singleStatement.expression.operatorExpression.operands.Array.data[1].value.constant.type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
+      propertyPath: logic.statements.Array.data[0].singleStatement.expression.operatorExpression.operands.Array.data[1].value.sourceState.key
+      value: damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 118621039, guid: b019ab70ef9533f49bf9b71713205ad7, type: 3}
+      propertyPath: logic.statements.Array.data[0].singleStatement.expression.operatorExpression.operands.Array.data[1].value.constant.integerValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 794507638249486049, guid: b019ab70ef9533f49bf9b71713205ad7,
         type: 3}
       propertyPath: m_RootOrder
