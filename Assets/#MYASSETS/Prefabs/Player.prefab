@@ -1664,7 +1664,6 @@ GameObject:
   - component: {fileID: 1270078335}
   - component: {fileID: 1270078337}
   - component: {fileID: 1270078336}
-  - component: {fileID: 1995990522}
   m_Layer: 0
   m_Name: Respawn
   m_TagString: Untagged
@@ -1744,72 +1743,6 @@ MonoBehaviour:
     target: 1
     key: Respawn
     item: {fileID: 0}
---- !u!114 &1995990522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270078334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86ec462289974bc7b6a239dbfffa33aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key:
-    target: 2
-    key: Decrement
-    item: {fileID: 0}
-  logic:
-    statements:
-    - singleStatement:
-        targetState:
-          target: 1
-          key: Respawn
-          parameterType: 0
-        expression:
-          type: 1
-          value:
-            type: 0
-            constant:
-              type: 1
-              boolValue: 0
-              floatValue: 0
-              integerValue: 0
-            sourceState:
-              target: 1
-              key: Respawn
-          operatorExpression:
-            operator: 7
-            operands:
-            - type: 0
-              value:
-                type: 1
-                constant:
-                  type: 1
-                  boolValue: 0
-                  floatValue: 0
-                  integerValue: 0
-                sourceState:
-                  target: 2
-                  key: isGameStart
-              operatorExpression:
-                operator: 0
-                operands: []
-            - type: 0
-              value:
-                type: 0
-                constant:
-                  type: 1
-                  boolValue: 1
-                  floatValue: 3
-                  integerValue: 0
-                sourceState:
-                  target: 1
-                  key: Respawn
-              operatorExpression:
-                operator: 0
-                operands: []
 --- !u!1 &1393365278
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,6 +2839,7 @@ GameObject:
   - component: {fileID: 5093294361088406055}
   - component: {fileID: 2490150064589608134}
   - component: {fileID: 7743927150696652405}
+  - component: {fileID: 443648660}
   m_Layer: 0
   m_Name: Parameter
   m_TagString: Untagged
@@ -3082,6 +3016,58 @@ MonoBehaviour:
               boolValue: 0
               floatValue: 3
               integerValue: 10
+            sourceState:
+              target: 1
+              key: 
+          operatorExpression:
+            operator: 0
+            operands:
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 0
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 1
+                  key: 
+              operatorExpression:
+                operator: 0
+                operands: []
+--- !u!114 &443648660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624599160346590377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ec462289974bc7b6a239dbfffa33aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key:
+    target: 2
+    key: GameStart
+    item: {fileID: 0}
+  logic:
+    statements:
+    - singleStatement:
+        targetState:
+          target: 1
+          key: isAlive
+          parameterType: 1
+        expression:
+          type: 0
+          value:
+            type: 0
+            constant:
+              type: 1
+              boolValue: 1
+              floatValue: 0
+              integerValue: 0
             sourceState:
               target: 1
               key: 
