@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 740824141077330808}
   - component: {fileID: 740824141077330809}
   - component: {fileID: 740824141077330810}
+  - component: {fileID: 225829934712898846}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -80,6 +81,30 @@ MonoBehaviour:
   - target: 3
     specifiedTargetItem: {fileID: 0}
     key: Jump
+    type: 0
+    value:
+      boolValue: 0
+      floatValue: 0
+      integerValue: 0
+--- !u!114 &225829934712898846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740824141077330811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba507dbcf46b94a9895daa4d46e12805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 740824141077330809}
+  collisionEventType: 0
+  collisionType: 2
+  triggers:
+  - target: 3
+    specifiedTargetItem: {fileID: 0}
+    key: Landing
     type: 0
     value:
       boolValue: 0
