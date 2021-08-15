@@ -732,10 +732,11 @@ GameObject:
   - component: {fileID: 1061729680}
   - component: {fileID: 1061729682}
   - component: {fileID: 1061729683}
-  - component: {fileID: 1862998714}
   - component: {fileID: 1862998715}
   - component: {fileID: 1862998716}
   - component: {fileID: 1862998717}
+  - component: {fileID: 825169869}
+  - component: {fileID: 825169873}
   m_Layer: 0
   m_Name: JumpStatus
   m_TagString: Untagged
@@ -966,54 +967,6 @@ MonoBehaviour:
             - type: 0
               value:
                 type: 1
-                constant:
-                  type: 1
-                  boolValue: 1
-                  floatValue: 0
-                  integerValue: 0
-                sourceState:
-                  target: 1
-                  key: step
-              operatorExpression:
-                operator: 0
-                operands: []
-    - singleStatement:
-        targetState:
-          target: 1
-          key: SetSuperJump
-          parameterType: 0
-        expression:
-          type: 1
-          value:
-            type: 1
-            constant:
-              type: 1
-              boolValue: 0
-              floatValue: 0
-              integerValue: 0
-            sourceState:
-              target: 1
-              key: hop
-          operatorExpression:
-            operator: 3
-            operands:
-            - type: 0
-              value:
-                type: 1
-                constant:
-                  type: 1
-                  boolValue: 0
-                  floatValue: 0
-                  integerValue: 0
-                sourceState:
-                  target: 1
-                  key: step
-              operatorExpression:
-                operator: 0
-                operands: []
-            - type: 0
-              value:
-                type: 0
                 constant:
                   type: 1
                   boolValue: 1
@@ -1293,66 +1246,6 @@ MonoBehaviour:
               operatorExpression:
                 operator: 0
                 operands: []
-    - singleStatement:
-        targetState:
-          target: 1
-          key: jumpHeight
-          parameterType: 2
-        expression:
-          type: 0
-          value:
-            type: 0
-            constant:
-              type: 2
-              boolValue: 0
-              floatValue: 3.5
-              integerValue: 0
-            sourceState:
-              target: 1
-              key: 
-          operatorExpression:
-            operator: 0
-            operands:
-            - type: 0
-              value:
-                type: 0
-                constant:
-                  type: 1
-                  boolValue: 0
-                  floatValue: 0
-                  integerValue: 0
-                sourceState:
-                  target: 1
-                  key: 
-              operatorExpression:
-                operator: 0
-                operands: []
---- !u!114 &1862998714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061729678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d99222c508466c9f51279c46d58ed2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key:
-    target: 1
-    key: ResetJumpStatus
-    item: {fileID: 0}
-  delayTimeSeconds: 1
-  triggers:
-  - target: 2
-    specifiedTargetItem: {fileID: 0}
-    key: jump
-    type: 1
-    value:
-      boolValue: 0
-      floatValue: 0
-      integerValue: 0
 --- !u!114 &1862998715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1489,7 +1382,7 @@ MonoBehaviour:
     target: 1
     key: SetSuperJump
     item: {fileID: 0}
-  delayTimeSeconds: 3
+  delayTimeSeconds: 1
   triggers:
   - target: 2
     specifiedTargetItem: {fileID: 0}
@@ -1533,6 +1426,240 @@ MonoBehaviour:
       boolValue: 0
       floatValue: 0
       integerValue: 0
+--- !u!114 &825169869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061729678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ec462289974bc7b6a239dbfffa33aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key:
+    target: 1
+    key: Landing
+    item: {fileID: 0}
+  logic:
+    statements:
+    - singleStatement:
+        targetState:
+          target: 1
+          key: SetSuperJump
+          parameterType: 0
+        expression:
+          type: 1
+          value:
+            type: 0
+            constant:
+              type: 1
+              boolValue: 0
+              floatValue: 0
+              integerValue: 0
+            sourceState:
+              target: 1
+              key: 
+          operatorExpression:
+            operator: 3
+            operands:
+            - type: 0
+              value:
+                type: 1
+                constant:
+                  type: 1
+                  boolValue: 0
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 1
+                  key: step
+              operatorExpression:
+                operator: 0
+                operands: []
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 1
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 1
+                  key: step
+              operatorExpression:
+                operator: 0
+                operands: []
+    - singleStatement:
+        targetState:
+          target: 1
+          key: ResetJump
+          parameterType: 0
+        expression:
+          type: 1
+          value:
+            type: 0
+            constant:
+              type: 1
+              boolValue: 0
+              floatValue: 0
+              integerValue: 0
+            sourceState:
+              target: 1
+              key: 
+          operatorExpression:
+            operator: 3
+            operands:
+            - type: 0
+              value:
+                type: 1
+                constant:
+                  type: 1
+                  boolValue: 0
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 1
+                  key: jump
+              operatorExpression:
+                operator: 0
+                operands: []
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 1
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 1
+                  key: step
+              operatorExpression:
+                operator: 0
+                operands: []
+--- !u!114 &825169873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061729678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ec462289974bc7b6a239dbfffa33aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key:
+    target: 1
+    key: ResetJump
+    item: {fileID: 0}
+  logic:
+    statements:
+    - singleStatement:
+        targetState:
+          target: 1
+          key: jump
+          parameterType: 1
+        expression:
+          type: 0
+          value:
+            type: 0
+            constant:
+              type: 1
+              boolValue: 0
+              floatValue: 0
+              integerValue: 0
+            sourceState:
+              target: 1
+              key: 
+          operatorExpression:
+            operator: 0
+            operands:
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 0
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 1
+                  key: 
+              operatorExpression:
+                operator: 0
+                operands: []
+    - singleStatement:
+        targetState:
+          target: 1
+          key: jump
+          parameterType: 1
+        expression:
+          type: 0
+          value:
+            type: 0
+            constant:
+              type: 1
+              boolValue: 0
+              floatValue: 0
+              integerValue: 0
+            sourceState:
+              target: 1
+              key: 
+          operatorExpression:
+            operator: 0
+            operands:
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 0
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 1
+                  key: 
+              operatorExpression:
+                operator: 0
+                operands: []
+    - singleStatement:
+        targetState:
+          target: 1
+          key: jumpHeight
+          parameterType: 2
+        expression:
+          type: 0
+          value:
+            type: 0
+            constant:
+              type: 2
+              boolValue: 0
+              floatValue: 3.5
+              integerValue: 0
+            sourceState:
+              target: 1
+              key: 
+          operatorExpression:
+            operator: 0
+            operands:
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 0
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 1
+                  key: 
+              operatorExpression:
+                operator: 0
+                operands: []
 --- !u!1 &1144216600
 GameObject:
   m_ObjectHideFlags: 0
