@@ -1420,6 +1420,7 @@ GameObject:
   - component: {fileID: -2209858941179218886}
   - component: {fileID: -3620716086066207932}
   - component: {fileID: -8854451424007675928}
+  - component: {fileID: 3758629078546365525}
   m_Layer: 14
   m_Name: MGHGun
   m_TagString: Untagged
@@ -2448,6 +2449,54 @@ MonoBehaviour:
               operatorExpression:
                 operator: 0
                 operands: []
+    - singleStatement:
+        targetState:
+          target: 0
+          key: Dicrese
+          parameterType: 0
+        expression:
+          type: 1
+          value:
+            type: 0
+            constant:
+              type: 1
+              boolValue: 0
+              floatValue: 0
+              integerValue: 0
+            sourceState:
+              target: 0
+              key: 
+          operatorExpression:
+            operator: 12
+            operands:
+            - type: 0
+              value:
+                type: 1
+                constant:
+                  type: 1
+                  boolValue: 0
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 1
+                  key: hp
+              operatorExpression:
+                operator: 0
+                operands: []
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 3
+                  boolValue: 0
+                  floatValue: 2
+                  integerValue: 0
+                sourceState:
+                  target: 0
+                  key: damage
+              operatorExpression:
+                operator: 0
+                operands: []
 --- !u!114 &-2206851545083556286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2620,6 +2669,73 @@ MonoBehaviour:
       boolValue: 0
       floatValue: 0
       integerValue: 0
+--- !u!114 &3758629078546365525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016690932170793034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67bdc2960f9462385a7fba1c0052836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalGimmickKey:
+    key:
+      target: 0
+      key: Dicrese
+    item: {fileID: 3016690932170793026}
+  logic:
+    statements:
+    - singleStatement:
+        targetState:
+          target: 2
+          key: Decrement
+          parameterType: 0
+        expression:
+          type: 1
+          value:
+            type: 1
+            constant:
+              type: 1
+              boolValue: 0
+              floatValue: 0
+              integerValue: 0
+            sourceState:
+              target: 2
+              key: 
+          operatorExpression:
+            operator: 7
+            operands:
+            - type: 0
+              value:
+                type: 1
+                constant:
+                  type: 1
+                  boolValue: 0
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 2
+                  key: isGameStart
+              operatorExpression:
+                operator: 0
+                operands: []
+            - type: 0
+              value:
+                type: 0
+                constant:
+                  type: 1
+                  boolValue: 1
+                  floatValue: 0
+                  integerValue: 0
+                sourceState:
+                  target: 2
+                  key: 
+              operatorExpression:
+                operator: 0
+                operands: []
 --- !u!1 &3016690932186029687
 GameObject:
   m_ObjectHideFlags: 0
