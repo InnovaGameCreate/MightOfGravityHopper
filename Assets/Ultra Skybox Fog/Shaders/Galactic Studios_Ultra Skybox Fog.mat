@@ -26,13 +26,13 @@ Material:
     m_Floats:
     - _Exposure: 1
     - _FogBottom: 0
-    - _FogEnd: 0.4
+    - _FogEnd: 0.391
     - _FogIntens: 1
     - _FogStart: 0
     - _MieIntens: 0
-    - _MieSize: 0.8
+    - _MieSize: 0.262
     - _Rotation: 0
-    - _SunDir: 0
+    - _SunDir: 63
     m_Colors:
     - _FogCol: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
     - _MieTint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
