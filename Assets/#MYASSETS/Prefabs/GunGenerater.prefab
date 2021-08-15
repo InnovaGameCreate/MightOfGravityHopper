@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id:
-    value: 0
+    value: 5576226060447284694
   itemName: "\u9283\u751F\u6210\u5668"
 --- !u!114 &7341419785499050062
 MonoBehaviour:
@@ -211,7 +211,8 @@ MonoBehaviour:
   key:
     target: 0
     key: Generate
-  itemTemplate: {fileID: 0}
+  itemTemplate: {fileID: 3016690932170793026, guid: cdcdd685eb06d1b4f8c3407dfa62dcda,
+    type: 3}
   itemTemplateId:
-    value: 0
+    value: 4315587875720619407
   spawnPoint: {fileID: 7341419784712272090}
